@@ -13,7 +13,6 @@ import:
 - package: github.com/gorilla/mux
 - package: github.com/opentracing/opentracing-go
 - package: github.com/openzipkin/zipkin-go-opentracing
-- package: github.com/newrelic/go-agent/v3/newrelic
 - package: github.com/prometheus/client_golang
   subpackages:
   - prometheus
