@@ -5,8 +5,6 @@ ENV HATEAOS user
 ENV GIT_SSL_NO_VERIFY=1
 ENV USER_DATABASE mongodb
 
-RUN go get -v github.com/newrelic/go-agent/v3/newrelic
-
 COPY . /go/src/github.com/microservices-demo/user/
 RUN apk update
 RUN apk add git
