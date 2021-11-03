@@ -55,10 +55,10 @@ func main() {
 	errc := make(chan error)
 	
 	//Start New Relic Agent
-	//app, err := newrelic.NewApplication(
-    	//    newrelic.ConfigAppName("Sock Shop"),
-    	//    newrelic.ConfigLicense("NRAK-7JCF597RJ691YP5MZWST3HWRNY2"),
-	//)
+	app, err := newrelic.NewApplication(
+    	    newrelic.ConfigAppName("Sock Shop"),
+    	    newrelic.ConfigLicense("NRAK-7JCF597RJ691YP5MZWST3HWRNY2"),
+	)
 
 	// Log domain.
 	var logger log.Logger
