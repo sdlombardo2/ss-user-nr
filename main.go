@@ -21,7 +21,7 @@ import (
 	zipkin "github.com/openzipkin/zipkin-go-opentracing"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	commonMiddleware "github.com/weaveworks/common/middleware"
-	//newrelic "github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 var (
