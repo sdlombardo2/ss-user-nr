@@ -7,6 +7,7 @@ WORKDIR /go/src/github.com/microservices-demo/user/
 
 RUN apk update
 RUN apk add git
+RUN go get "github.com/newrelic/go-agent/v3/newrelic"
 RUN go get -v github.com/Masterminds/glide 
 RUN glide install && CGO_ENABLED=0 go build -a -installsuffix cgo -o /user main.go
 
@@ -23,8 +24,6 @@ RUN	addgroup -g ${SERVICE_GID} ${SERVICE_GROUP} && \
 ENV HATEAOS user
 ENV USER_DATABASE mongodb
 ENV MONGO_HOST user-db
-
-RUN go get "github.com/newrelic/go-agent/v3/newrelic"
 
 WORKDIR /
 EXPOSE 8084
