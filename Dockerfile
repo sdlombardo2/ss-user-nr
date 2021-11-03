@@ -1,5 +1,7 @@
 FROM golang:1.7-alpine
 
+ENV GIT_SSL_NO_VERIFY=1
+
 COPY . /go/src/github.com/microservices-demo/user/
 WORKDIR /go/src/github.com/microservices-demo/user/
 
