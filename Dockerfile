@@ -24,6 +24,8 @@ ENV HATEAOS user
 ENV USER_DATABASE mongodb
 ENV MONGO_HOST user-db
 
+RUN go get "github.com/newrelic/go-agent/v3/newrelic"
+
 WORKDIR /
 EXPOSE 8084
 COPY --from=0 /user /
