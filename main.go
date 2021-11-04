@@ -21,7 +21,6 @@ import (
 	zipkin "github.com/openzipkin/zipkin-go-opentracing"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	commonMiddleware "github.com/weaveworks/common/middleware"
-	"github.com/newrelic/go-agent/v3/newrelic"
 )
 
 var (
@@ -54,12 +53,6 @@ func main() {
 	// Mechanical stuff.
 	errc := make(chan error)
 	
-	//Start New Relic Agent
-	app, err := newrelic.NewApplication(
-    	    newrelic.ConfigAppName("Sock Shop"),
-    	    newrelic.ConfigLicense("NRAK-7JCF597RJ691YP5MZWST3HWRNY2"),
-	)
-
 	// Log domain.
 	var logger log.Logger
 	{
