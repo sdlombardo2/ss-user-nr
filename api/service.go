@@ -46,8 +46,6 @@ type Health struct {
 }
 
 func (s *fixedService) Login(username, password string) (users.User, error) {
-	txn := app.StartTransaction("login_transaction")
-        defer txn.End()
 	u, err := db.GetUserByName(username)
 	if err != nil {
 		return users.New(), err
